@@ -1,0 +1,70 @@
+const bubbleLang = {
+    en: {
+        title: "Picking Things Up Game",
+        start: "Start Game",
+        back: "Back to Menu",
+        gameOver: "Game Over!",
+        selectDifficulty: "Select Difficulty",
+        easy: "Easy",
+        medium: "Medium",
+        hard: "Hard",
+        selectMode: "Select Mode",
+        single: "Single Hand",
+        double: "Double Hand",
+        grasp: "Grasping",
+        retry: "Retry",
+        error: "Game start failed, please try again",
+        left: "Move to the left",
+        right: "Move to the right",
+        forward: "Move forward",
+        backward: "Move backward",
+        calibrate1: "Raise your arms",
+        calibrate2: "Slowly move your arms out to the side",
+        score: "Score",
+        lives: "Lives",
+        countTime: "CountdownTimer",
+        timePlayed: "Time Played",
+        finalScore: "Final Score",
+        finalLife: "Final Lives",
+        FIRST_PICK_UP: "FIRST_PICK_UP_EN",
+        FIRST_WRONG_BIN: "FIRST_WRONG_BIN_EN",
+        FIRST_JUNK_WRONG_BIN: "FIRST_JUNK_WRONG_BIN_EN"
+    },
+    zh: {
+        title: "海底历险记 (深蹲)",
+        start: "开始游戏",
+        back: "返回菜单",
+        gameOver: "游戏结束！",
+        selectDifficulty: "选择难度",
+        easy: "简单",
+        medium: "中等",
+        hard: "困难",
+        selectMode: "选择单手或双手",
+        single: "单手",
+        double: "双手",
+        grasp: "抓握",
+        retry: "重试",
+        error: "游戏启动失败，请重试",
+        left: "往左站",
+        right: "往右站",
+        forward: "往前站",
+        backward: "往后站",
+        calibrate1: "抬起胳膊",
+        calibrate2: "慢慢的把胳膊伸出来",
+        score: "分数",
+        lives: "生命值",
+        countTime: "倒计时",
+        timePlayed: "游戏时间",
+        finalScore: "最终得分",
+        finalLife: "最终生命值",
+        FIRST_PICK_UP: "FIRST_PICK_UP_ZH",
+        FIRST_WRONG_BIN: "FIRST_WRONG_BIN_ZH",
+        FIRST_JUNK_WRONG_BIN: "FIRST_JUNK_WRONG_BIN_ZH"
+    }
+}
+
+const currentLang = localStorage.getItem('language') || 'en'
+
+export function t(key) {
+    return bubbleLang[currentLang]?.[key] || key
+}
